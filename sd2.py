@@ -1,8 +1,8 @@
 import numpy as np
 import os
+import stroll
 import sys
 import wavio
-import wolk
 from pathlib import Path
 
 FRAMERATE = 44100
@@ -15,7 +15,7 @@ COUNT = 100
 def main():
     os.chdir(ROOT)
     i = 0
-    for f in wolk.wolk('source', relative=True):
+    for f in stroll.stroll('source', relative=True):
         if f.suffix != '.Sd2f':
             continue
 
